@@ -1,5 +1,5 @@
-# <center>Python secrets</center>
-##### <center>Did you know that...<center>
+# <p align="center">Python secrets</center>
+##### <p align="center">Did you know that...</center>
 You can add separators in numbers, and it won't affect any behaviour:
 ```python
 a = 1_000_000
