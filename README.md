@@ -1,5 +1,6 @@
-# <p align="center">Python secrets</center>
+# <p align="center">[Python](https://www.python.org/) secrets</center>
 ##### <p align="center">Did you know that...</center>
+
 You can add separators in numbers, and it won't affect any behaviour:
 ```python
 a = 1_000_000
@@ -61,3 +62,9 @@ from pprint import pprint
                        'width': 500}}}
 ```
 ###### Basically it works for every data structure including lists, tuples, etc.
+
+
+
+
+---
+[![Unlicense](https://img.shields.io/badge/License-Unlicense-blue.svg)](https://unlicense.org/) [![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://opensource.org/)
