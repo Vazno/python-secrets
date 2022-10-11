@@ -29,7 +29,7 @@ from __future__ import braces
     ^
 SyntaxError: not a chance
 ```
----
+-------------------------------------------
 Python has `pprint()` function, which you can use to print complex data structures in a human readable way.
 
 ##### `print()` -> Ususal boring print:
@@ -62,9 +62,23 @@ from pprint import pprint
                        'width': 500}}}
 ```
 ###### Basically it works for every data structure including lists, tuples, etc.
-
-
-
-
----
+-------------------------------------------
+You can use `;` to put multiple statements in one line, like:
+```python
+print("The first") ; print("The second") ; print("The third")
+a = 5 ; b = 10 ; c = 100
+import datetime ; print("Hello, world!")
+```
+It even works with `for`, and `while loops`:
+```python
+for i in range(3): print('Check') ; print('This') ; print("Out")
+```
+```python
+while True: print("123") ; print("456")
+```
+###### [Semicolons are end statements in C](https://www.geeksforgeeks.org/role-of-semicolon-in-various-programming-languages/).
+* ###### The Semicolon tells that the current statement has been terminated and other statements following are new statements.
+* ###### Usage of Semicolon in C will remove ambiguity and confusion while looking at the code.
+* ###### They are not used in between the control flow statements but are used in separating the conditions in looping. 
+-------------------------------------------
 [![Unlicense](https://img.shields.io/badge/License-Unlicense-blue.svg)](https://unlicense.org/) [![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://opensource.org/)
