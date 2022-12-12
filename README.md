@@ -80,5 +80,59 @@ while True: print("123") ; print("456")
 * ###### The Semicolon tells that the current statement has been terminated and other statements following are new statements.
 * ###### Usage of Semicolon in C will remove ambiguity and confusion while looking at the code.
 * ###### They are not used in between the control flow statements but are used in separating the conditions in looping. 
+
 -------------------------------------------
+Python has the ability to use the [dis module](https://docs.python.org/3/library/dis.html) to disassemble bytecode. This allows you to see the low-level instructions that the Python interpreter uses to execute your code, which can be useful for debugging and performance optimization.
+
+To use the dis module, you need to import it and then use the `dis()` function to disassemble a function or code block. For example:
+```python
+import dis
+
+def add(a, b):
+    return a + b
+
+dis.dis(add)
+```
+```
+  2           0 LOAD_FAST                0 (a)
+              2 LOAD_FAST                1 (b)
+              4 BINARY_ADD
+              6 RETURN_VALUE
+```
+The first instruction, `LOAD_FAST 0`, loads the value of the a argument onto the stack. The second instruction, `LOAD_FAST 1`, loads the value of the b argument onto the stack. The third instruction, `BINARY_ADD`, pops the top two values from the stack, adds them together, and then pushes the result back onto the stack. Finally, the `RETURN_VALUE` instruction pops the top value from the stack and returns it as the result of the add() function.
+#####
+These low-level instructions show how the Python interpreter executes the `add()` function, but they are not intended to be read or understood by humans. Instead, they are used by the Python interpreter to quickly and efficiently execute the code.
+
+-------------------------------------------
+Another rare feature of Python is the ability to use the `gc` module to control the garbage collector.
+
+```py
+import gc
+
+# Enable the garbage collector
+gc.enable()
+
+# Create a list of objects
+objects = [
+    [],
+    {},
+    "Hello, world!",
+    123,
+    b"\x01\x02\x03",
+    set(),
+    (1, 2, 3),
+]
+
+# Print the number of objects
+print(f"Number of objects: {len(gc.get_objects())}")
+
+# Collect unused objects and reclaim memory
+gc.collect()
+
+# Print the number of objects again
+print(f"Number of objects after garbage collection: {len(gc.get_objects())}")
+```
+
+-------------------------------------------
+
 [![Unlicense](https://img.shields.io/badge/License-Unlicense-blue.svg)](https://unlicense.org/) [![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://opensource.org/)
